@@ -1,0 +1,79 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="container">
+  <!-- 顶部导航栏 -->
+  <view class="header">
+    <view class="title">购物车({{totalItems}})</view>
+    <view class="manage">管理</view>
+  </view>
+  
+  <!-- 商品总数 -->
+  <view class="total-items">共{{totalItems}}件宝贝</view>
+  
+  <!-- 购物车商品列表 -->
+  <view class="cart-items">
+    <view class="cart-item" wx:for="{{cartItems}}" wx:key="id">
+      <!-- 选择框 -->
+      <checkbox class="checkbox" checked="{{item.selected}}" bindtap="toggleSelect" data-id="{{item.id}}"/>
+      
+      <!-- 商家信息 -->
+      <view class="shop-info">
+        <image class="shop-icon" src="{{item.shopIcon}}" wx:if="{{item.shopIcon}}"></image>
+        <text class="shop-name">{{item.shopName}}</text>
+        <text class="shop-arrow">></text>
+      </view>
+      
+      <!-- 商品信息 -->
+      <view class="product-info">
+        <image class="product-image" src="{{item.image}}"></image>
+        <view class="product-details">
+          <view class="product-title">{{item.title}}</view>
+          <view class="product-specs" wx:if="{{item.specs}}">{{item.specs}}</view>
+          <view class="price-quantity">
+            <text class="price">￥{{item.price}}</text>
+            <view class="quantity-control">
+              <text class="minus" bindtap="decreaseQuantity" data-id="{{item.id}}">-</text>
+              <text class="quantity">{{item.quantity}}</text>
+              <text class="plus" bindtap="increaseQuantity" data-id="{{item.id}}">+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 优惠券 -->
+      <view class="coupon" wx:if="{{item.coupon}}">
+        <text class="coupon-text">领券</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 底部结算栏 -->
+  <view class="checkout-bar">
+    <view class="select-all">
+      <checkbox checked="{{selectAll}}" bindtap="toggleSelectAll"/>
+      <text>全选</text>
+    </view>
+    <view class="total">
+      <text>合计: </text>
+      <text class="total-price">￥{{totalPrice}}</text>
+    </view>
+    <view class="checkout-btn {{totalPrice > 0 ? 'active' : ''}}">
+      <text>结算({{selectedItems}})</text>
+    </view>
+  </view>
+  
+  <!-- 底部导航 -->
+  <view class="tab-bar">
+    <view class="tab-item">
+      <image src="/static/index.png" mode="aspectFit"></image>
+      <text>首页</text>
+    </view>
+    <view class="tab-item active">
+      <image src="/static/cart1.png" mode="aspectFit"></image>
+      <text>购物车</text>
+    </view>
+    <view class="tab-item">
+      <image src="/static/user.png" mode="aspectFit"></image>
+      <text>我的淘宝</text>
+    </view>
+  </view>
+</view>

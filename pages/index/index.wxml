@@ -1,0 +1,43 @@
+<!-- 淘宝小程序 -->
+
+<!-- Top Bar -->
+<!-- Logo + Search +  MarkCard-->
+<view class="title" style="height: {{statubar}}+px">
+  <!-- logo -->
+  <view class="logo">
+    <image src="https://gw.alicdn.com/imgextra/i4/O1CN019XWXNq1aAPOVMYSiu_!!6000000003289-2-tps-167-63.png" mode="widthFix" />
+  </view>
+  <!-- search -->
+  <view class="search">
+    <text>寻找宝贝店铺</text>
+    <view class="search_button">搜索</view>
+  </view>
+  <!-- markcard -->
+  <view class="markcard">
+    <image src="https://gw.alicdn.com/imgextra/i4/O1CN01ftum4629SHP6bCqTm_!!6000000008066-2-tps-99-99.png" mode="widthFix" />
+  </view>
+</view>
+
+<!-- scoll-view -->
+<view class="nav">
+  <scroll-view scroll-x="true" enable-flex>
+    <view class="item_container" wx:for="{{menu_list}}" wx:key="key">
+      <view class="item">
+        <image src="{{item.img}}" mode="widthFix" />
+        <text>{{item.txt}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- card -->
+<view class="card_container">
+  <view class="card" wx:for="{{card_list}}" wx:key="key">
+    <image src="{{item.img}}" mode="widthFix" />
+    <text class="info">{{item.info}}</text>
+    <view class="price">
+      <view class="p">￥{{item.price}}</view>
+      <view class="b">{{item.buy}}</view>
+    </view>
+  </view>
+</view>

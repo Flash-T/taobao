@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarBackgroundColor": "#ff5500",
+  "navigationBarTitleText": "淘宝",
+  "navigationBarTextStyle": "white"
+}
