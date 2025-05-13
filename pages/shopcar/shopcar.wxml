@@ -62,18 +62,18 @@
   </view>
   
   <!-- 底部导航 -->
-  <view class="tab-bar">
+  <!-- <view class="tab-bar">
     <view class="tab-item">
-      <image src="/static/index.png" mode="aspectFit"></image>
+      <image src="https://img.icons8.com/ios-filled/50/000000/home.png" mode="aspectFit"></image>
       <text>首页</text>
     </view>
     <view class="tab-item active">
-      <image src="/static/cart1.png" mode="aspectFit"></image>
+      <image src="https://img.icons8.com/ios-filled/50/ff6600/shopping-cart.png" mode="aspectFit"></image>
       <text>购物车</text>
     </view>
     <view class="tab-item">
-      <image src="/static/user.png" mode="aspectFit"></image>
+      <image src="https://img.icons8.com/ios-filled/50/000000/user.png" mode="aspectFit"></image>
       <text>我的淘宝</text>
     </view>
-  </view>
+  </view> -->
 </view>

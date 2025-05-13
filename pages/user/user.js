@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo: {
       nickname: 'TpOMG',
-      avatar: '/static/avatar.png',
+      avatar: 'https://img.icons8.com/color/96/null/user-male-circle--v1.png',
       accountName: 'tb17029482'
     },
     recommendProducts: [
@@ -92,10 +92,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // 模拟获取用户头像
+    // 模拟获取用户头像，使用网络图片
     setTimeout(() => {
       this.setData({
-        'userInfo.avatar': 'https://img.alicdn.com/imgextra/i4/O1CN01KtQz4k1PnVTNh0rXn_!!6000000001885-2-tps-100-100.png'
+        'userInfo.avatar': 'https://img.icons8.com/color/96/null/user-male-circle--v1.png'
       })
     }, 500)
   },

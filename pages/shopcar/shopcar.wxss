@@ -2,8 +2,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: #f5f5f5;
+}
+
+.header, .total-items, .cart-items, .checkout-bar{
+  width: 700rpx;
 }
 
 /* 顶部导航栏 */

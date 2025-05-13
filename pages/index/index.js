@@ -147,6 +147,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    /* API请求已注释
     let that = this;
     wx.request({
       url: api+'/getobject',
@@ -180,6 +181,7 @@ Page({
         console.error('请求失败：', err)
       }
     })
+    */
   },
 
   /**
